@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             TextView locationTextView = new TextView(this); // 定义 locationTextView
             if (i == 2) { // 如果是“位置”列
                 locationTextView.setText(locationData);
-                locationTextView.setTextSize(9);
+                locationTextView.setTextSize(10);
             } else {
                 locationTextView.setText(rowData[i]);
                 locationTextView.setTextSize(12);

@@ -36,58 +36,55 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TableLayout
-            android:id="@+id/resultTable"
+        android:layout_height="match_parent">
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="#FFFFFF"
-            android:padding="8dp"
-            android:stretchColumns="0,1">
+            android:layout_height="wrap_content">
 
-            <GridLayout
-                android:id="@+id/resultGridLayout"
+            <TableLayout
+                android:id="@+id/resultTable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:rowCount="1"
-                android:padding="8dp">
+                android:layout_marginBottom="16dp"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:stretchColumns="0,1">
 
-                <!-- 单词 -->
-                <TextView
-                    android:id="@+id/wordTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:padding="8dp"
-                    android:textSize="14sp"
-                    android:text="单词"/>
+                <TableRow>
+                    <!-- 单词 -->
+                    <TextView
+                        android:id="@+id/wordTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:text="单词"/>
 
-                <!-- 频率 -->
-                <TextView
-                    android:id="@+id/frequencyTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:padding="8dp"
-                    android:textSize="14sp"
-                    android:text="频率"/>
+                    <!-- 频率 -->
+                    <TextView
+                        android:id="@+id/frequencyTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:text="频率"/>
 
-                <!-- 位置 -->
-                <TextView
-                    android:id="@+id/locationTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:padding="8dp"
-                    android:textSize="14sp"
-                    android:text="位置"/>
+                    <!-- 位置 -->
+                    <TextView
+                        android:id="@+id/locationTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:text="位置"/>
+                </TableRow>
 
-            </GridLayout>
-
-        </TableLayout>
+            </TableLayout>
+        </HorizontalScrollView>
     </ScrollView>
 
 </LinearLayout>
