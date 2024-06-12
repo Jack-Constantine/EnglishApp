@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="请输入单词"
+        android:inputType="text|textNoSuggestions"
+        android:maxLines="1" />
+
+
+    <!-- 按钮 -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="查找"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <!-- 显示结果的表格布局 -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/resultTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:stretchColumns="0,1">
+
+            <GridLayout
+                android:id="@+id/resultGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="1"
+                android:padding="8dp">
+
+                <!-- 单词 -->
+                <TextView
+                    android:id="@+id/wordTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+                    android:text="单词"/>
+
+                <!-- 频率 -->
+                <TextView
+                    android:id="@+id/frequencyTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+                    android:text="频率"/>
+
+                <!-- 位置 -->
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+                    android:text="位置"/>
+
+            </GridLayout>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
